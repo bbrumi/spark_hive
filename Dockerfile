@@ -28,9 +28,9 @@ RUN cd /opt/ \
   && update-alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_161/bin/javac 100
 
 # SPARK
-ADD spark-1.6.2-bin-with-hive.tgz /opt/
+ADD spark-1.6.3-bin-hive.tgz /opt/
 RUN cd /opt/ \
- && ln -s /opt/spark-1.6.2-bin-with-hive /opt/spark
+ && ln -s /opt/spark-1.6.3-bin-hive /opt/spark
 
 ENV SPARK_HOME /opt/spark
 ENV PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.9-src.zip:$SPARK_HOME/python/:$PYTHONPATH
